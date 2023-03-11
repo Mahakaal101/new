@@ -11,11 +11,11 @@ def is_enabled(value, default):
         return default
 
 # Bot information
-PORT = environ.get("PORT", "8080")
+PORT = environ.get("PORT", "8000")
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '12124605'))
 API_HASH = environ.get('API_HASH', '5cf3577d85fd02286535ec2296934287')
-BOT_TOKEN = environ.get('BOT_TOKEN', "5867279415:AAHxI9qM4iu-v4sOl53KPYMCThNX9KQVXrQ")
+BOT_TOKEN = environ.get('BOT_TOKEN', "5931548571:AAE6-oizPAQT2FKFQXcxttuYkRV--0qvDl0")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -27,8 +27,8 @@ SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/8ee413afc32e5b393e
 NEWGRP = environ.get("NEWGRP", "https://telegra.ph/file/07c14729659c7c2b99f5a.jpg")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1883570185').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001810806290').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5104293442').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
@@ -48,14 +48,14 @@ SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/cynitesupport')
 MSG_ALRT = environ.get('MSG_ALRT', 'Share and Support Us')
 
 # Custom Chats
-SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', -1001797596826))
-FILE_CHANNEL = int(environ.get('FILE_CHANNEL', -1001810806290))
-FILE_CHANNEL_LINK = environ.get('FILE_CHANNEL_LINK', 't.me/cynitebackup')
+SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', ))
+FILE_CHANNEL = int(environ.get('FILE_CHANNEL', ))
+FILE_CHANNEL_LINK = environ.get('FILE_CHANNEL_LINK', '')
 HOW_DWLD_LINK = environ.get('HOW_DWLD_LINK', 'https://t.me/cynitemovies/3')
 
 # Log Channels
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1001819673897))
-RQST_LOG_CHANNEL = int(environ.get('RQST_LOG_CHANNEL', -1001819673897))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -100152957746))
+RQST_LOG_CHANNEL = int(environ.get('RQST_LOG_CHANNEL', -100152957746))
 
 # Bot Options
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
